@@ -1,74 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+   
+   <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      body {
+        background-image: url(https://i.imgur.com/F7UfADf.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed
+        
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 100px;
+      }
+      
+      .card {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 30px;
+        border-radius: 4%;
+        box-shadow: 3px 3px 1px 0px #00000060
+      }
+      
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #272262
+      }
+      
+      .label-float input {
+        width: 100%;
+        padding: 5px 5px;
+        display: inline-block;
+        border: 2px solid #272262;
+        background-color: transparent;
+        outline: none;
+        min-width: 180px;
+        font-size: 16px;
+        transition: all .3s ease-out;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+      
+      .label-float {
+        position: relative;
+        padding-top: 13px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      
+      .label-float input:focus {
+        border-bottom: 2px solid #4038a0;
+      }
+      
+      .label-float label {
+        color: #272262;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 20px;
+        padding: 2px 1em 0 1em;
+        transition: all .3s ease-out;
+      }
+      
+      .label-float input:focus + label,
+      .label-float input:valid + label {
+        font-size: 16px;
+        margin-top: -10px;
+        color: #4038a0
+      }
+      
+      button {
+        background-color: transparent;
+        border-color: #534aad;
+        color: #272262;
+        padding: 7px;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-top: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: all .4s ease-out;
+      }
+      
+      button:hover {
+        background-color: #272262;
+        color: #fff;
+      }
+      
+      .justify-center {
+        display: flex;
+        justify-content: center;
+      }
+      
+      hr {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width: 60%;
+      }
+      
+      p {
+        color: #272262;
+        font-size: 14pt;
+        text-align: center;
+  }
+    
+  .paragrafy {
+    color: #2fc6da;
+  }
+      
+  a {
+    color: #7a3077;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-out;
+  }
+      
+  a:hover {
+    color: #272262;
+  }
+      
+  .fa-eye {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #272262;
+  }
+    
+  .br {
+   white-space:normal ;
+  }
+      
+  </style>
+
+
 </head>
-
 <body>
-
-
-    <div class="container">
+    
+        <div class="container">
         <div class="card">
-            <h1>Cadastro</h1>
-    
-    
-            <div class="label-float">
-                <div class="email">
-                    <input type="text" id="E-mail" placeholder="" required>
-                    <label>E-mail</label>
-                </div>
-              </div>
-
-            <br>
-
-            <div class="label-float">
-                <div class="nome">
-                    <input type="text" id="nome" placeholder="" required>
-                    <label id="nome" for="nome">Nome</label>
-                </div>
+          <h1> Entrar </h1>
+          
+          <div class="label-float">
+            <div class="email">
+                <input type="text" id="E-mail" placeholder="" required>
+                <label>E-mail</label>
             </div>
+          </div>
 
-            <br>
+              <br>
 
+              
             <div class="label-float">
-                <div class="senha">
-                    <input type="password" id="senha" placeholder="" required>
-                    <label id="labelSenha" for="senha">Senha</label>
-                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            <div>
+              <input type="password" id="senha" placeholder=" " required>
+              <label id="labelSenha" for="senha">Senha</label>
+              <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
                 </div>
             </div>
+       
+          
+          <div>
+            <button>Entrar</button>
+          </div>
 
-            <br>
+                  <br>
+          
+           <label> <input type="checkbox">Lembre-me</label>
 
-            <div class="label-float">
-                <div class="confirmsenha">
-                    <input type="password" id="confirmsenha" placeholder="" required>
-                    <label id="labelConfirmSenha" for="confirmsenha">Confirmar Senha</label>
-
-                    <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
-
-                </div>
-            </div>
-
-            <br>
-
-            <div class="justfy-center">
-                <button oneclick="cadastrar()">Cadastrar</button>
-            </div>
-
-            <br>
-
-            <div class="paragrafy">
-                <p>Você já possui uma conta ?
-            </div>
-
-            <a href="file:///D:/Desktop/P.L%20V4/index.html" register>Entrar</a>
-
+                    <div class="br">
+                      <br>
+                    </div>
+                
+                   <a href="#" register>Esqueceu sua senha ?</a>
+      
+                   <br>
+                  <div class="paragrafy">
+                   <p>Você não possui uma conta ? 
+                  </div>
+                      <a href="file:///D:/Desktop/P.C%20V1/index.html">cadastre-se</a>
+      
+           </div>
         </div>
-    </div>
+
+
 </body>
 </html>
